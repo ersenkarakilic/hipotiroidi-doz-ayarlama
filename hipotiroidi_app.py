@@ -68,7 +68,11 @@ st.title("📊 Primer Hipotiroidi Doz Ayarlama Aracı")
 tsh = st.number_input("TSH (mIU/L)", 0.0, 100.0, step=0.1)
 mevcut_doz = st.number_input("Mevcut Levotiroksin Dozu (mcg)", 0, 300, step=12)
 yas = st.number_input("Yaş", 0, 120, step=1)
-ilac_duzenli = st.checkbox("💊 İlacımı son dönemde düzenli kullandım", value=True)
+ilac_duzenli = st.checkbox(
+    "💊 İlacımı son dönemde düzenli kullandım (veya hiç ilaç kullanmadım, ilk kez başlayacağım)", 
+    value=True
+)
+st.caption("🔹 Bu kutu tüm hastalar için varsayılan olarak işaretlidir. Eğer son dönemde ilaçları düzenli kullanmadıysanız bu işareti kaldırınız.")
 
 gebe_durumu = st.checkbox("Gebe / Gebelik Planı Var")
 anti_tpo = st.checkbox("Anti-TPO Pozitif")
